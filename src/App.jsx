@@ -4,10 +4,14 @@ import DenseAppBar from './components/DenseAppBar';
 
 function App() {
 	return (
-		<React.Fragment>
-			<DenseAppBar />
-			<Chart />
-		</React.Fragment>
+		<div className="App">
+			<nav>
+				<DenseAppBar />
+			</nav>
+			<main>
+				<Chart />
+			</main>
+		</div>
 	);
 }
 

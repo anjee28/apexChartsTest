@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/apexChartsTest/static/css/main.1c71bd4d.css",
-    "main.js": "/apexChartsTest/static/js/main.f88903d8.js",
+    "main.css": "/apexChartsTest/static/css/main.0837ba51.css",
+    "main.js": "/apexChartsTest/static/js/main.3cef3d03.js",
     "static/js/787.8da27c24.chunk.js": "/apexChartsTest/static/js/787.8da27c24.chunk.js",
     "index.html": "/apexChartsTest/index.html",
-    "main.1c71bd4d.css.map": "/apexChartsTest/static/css/main.1c71bd4d.css.map",
-    "main.f88903d8.js.map": "/apexChartsTest/static/js/main.f88903d8.js.map",
+    "main.0837ba51.css.map": "/apexChartsTest/static/css/main.0837ba51.css.map",
+    "main.3cef3d03.js.map": "/apexChartsTest/static/js/main.3cef3d03.js.map",
     "787.8da27c24.chunk.js.map": "/apexChartsTest/static/js/787.8da27c24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c71bd4d.css",
-    "static/js/main.f88903d8.js"
+    "static/css/main.0837ba51.css",
+    "static/js/main.3cef3d03.js"
   ]
 }
