@@ -1,0 +1,96 @@
+[debug] [2023-02-08T12:32:53.171Z] ----------------------------------------------------------------------
+[debug] [2023-02-08T12:32:53.172Z] Command:       /home/mel/.nvm/versions/node/v16.15.1/bin/node /home/mel/.nvm/versions/node/v16.15.1/bin/firebase deploy
+[debug] [2023-02-08T12:32:53.173Z] CLI Version:   11.22.0
+[debug] [2023-02-08T12:32:53.173Z] Platform:      linux
+[debug] [2023-02-08T12:32:53.173Z] Node Version:  v16.15.1
+[debug] [2023-02-08T12:32:53.173Z] Time:          Wed Feb 08 2023 20:32:53 GMT+0800 (Philippine Standard Time)
+[debug] [2023-02-08T12:32:53.174Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-08T12:32:53.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-08T12:32:53.230Z] > authorizing via signed-in user (anjee28.twoeight@gmail.com)
+[debug] [2023-02-08T12:32:53.230Z] [iam] checking project peaci-57b6e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-08T12:32:53.232Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/peaci-57b6e:testIamPermissions [none]
+[debug] [2023-02-08T12:32:53.232Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/peaci-57b6e:testIamPermissions x-goog-quota-user=projects/peaci-57b6e
+[debug] [2023-02-08T12:32:53.232Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/peaci-57b6e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-08T12:32:55.281Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/peaci-57b6e:testIamPermissions 200
+[debug] [2023-02-08T12:32:55.282Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/peaci-57b6e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-08T12:32:55.285Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/peaci-57b6e [none]
+[debug] [2023-02-08T12:32:56.586Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/peaci-57b6e 200
+[debug] [2023-02-08T12:32:56.587Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/peaci-57b6e {"projectId":"peaci-57b6e","projectNumber":"688236333960","displayName":"peaci","name":"projects/peaci-57b6e","resources":{"hostingSite":"peaci-57b6e"},"state":"ACTIVE","etag":"1_ec8a3098-f47f-4d93-8cd9-aff7a8c19290"}
+[info] 
+[info] === Deploying to 'peaci-57b6e'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-02-08T12:32:56.608Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions [none]
+[debug] [2023-02-08T12:32:56.609Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-02-08T12:32:58.190Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions 200
+[debug] [2023-02-08T12:32:58.190Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions {"name":"projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[peaci-57b6e]: beginning deploy... 
+[info] i  hosting[peaci-57b6e]: found 15 files in build 
+[debug] [2023-02-08T12:33:02.243Z] [hosting] uploading with 200 concurrency
+[debug] [2023-02-08T12:33:02.340Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2023-02-08T12:33:02.340Z] [hosting][hash queue][FINAL] {"max":89,"min":11,"avg":17.733333333333334,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":94}
+[debug] [2023-02-08T12:33:02.340Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b:populateFiles [none]
+[debug] [2023-02-08T12:33:02.341Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b:populateFiles {"files":{"/404.html":"b7bab6b83fa074653ff28c8d2a64135d3434575f70a12ab3d3ba8080461b9537","/asset-manifest.json":"4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3","/favicon.ico":"c599b7a91ab3627e3538125d9f40adc2d4bf949046984262670545dc7738af06","/index.html":"18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4","/logo192.png":"76c449ccb9cd117c2f2338f091b18f7050f3210e249b2228f5c81b23f34377cd","/logo512.png":"7779210d56c1f3741e2e487799fe3092def4fa6ac450a60532b807c3a8971205","/manifest.json":"0958a5e0c831126100c8c2d06a6bbaa665a3900f21aaff4130238a6f5a113aa1","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/static/css/main.03f04b95.css":"846671d237dec563b6f6f5b2b06169cb3536a2b2867d4617ec209b4475590eb9","/static/css/main.03f04b95.css.map":"62e9c1d87fd92e08f3677f5d05b4a422cb662ebf0687e805e6a835faf87f1faa","/static/js/787.50f95664.chunk.js":"d8657a1cfb7469de25b2c32f64f0eeb60c719b944ee6294b4ab8227530348628","/static/js/787.50f95664.chunk.js.map":"6833285485201f364dd7740a51e2dcde5cacbf05cde4cf4eb0a4bc94a0b03bfd","/static/js/main.97621149.js.LICENSE.txt":"f9a829852c246c33a2e9cd44cc7cfb9bdc13d35a3ebeb78833bc2a0332eb65a4","/static/js/main.97621149.js":"c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354","/static/js/main.97621149.js.map":"b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73"}}
+[debug] [2023-02-08T12:33:20.494Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b:populateFiles 200
+[debug] [2023-02-08T12:33:20.495Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b:populateFiles {"uploadRequiredHashes":["c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354","b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73","4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3","18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files"}
+[debug] [2023-02-08T12:33:20.498Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354 [none]
+[debug] [2023-02-08T12:33:20.499Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354 [stream]
+[debug] [2023-02-08T12:33:20.502Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73 [none]
+[debug] [2023-02-08T12:33:20.502Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73 [stream]
+[debug] [2023-02-08T12:33:20.504Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3 [none]
+[debug] [2023-02-08T12:33:20.504Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3 [stream]
+[debug] [2023-02-08T12:33:20.506Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4 [none]
+[debug] [2023-02-08T12:33:20.506Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4 [stream]
+[debug] [2023-02-08T12:33:20.508Z] [hosting][populate queue][FINAL] {"max":18159,"min":18159,"avg":18159,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":18169}
+[debug] [2023-02-08T12:33:20.508Z] [hosting] uploads queued: 4
+[debug] [2023-02-08T12:33:23.003Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354 200
+[debug] [2023-02-08T12:33:23.004Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/c239d7540f149168114b9fdcecf3bf391ad76fc825d6b3cf9b35bb905c065354 [stream]
+[debug] [2023-02-08T12:33:24.168Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3 200
+[debug] [2023-02-08T12:33:24.168Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/4f0c7f2575eb3299270e1ed53137560fbf4ffc4e7c24c8a5de809ea7929cf3c3 [stream]
+[debug] [2023-02-08T12:33:24.257Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4 200
+[debug] [2023-02-08T12:33:24.257Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/18a225e42578b379acd5137556e8baf6ba69d16a333557e4a905e0a6bda1dbc4 [stream]
+[debug] [2023-02-08T12:33:25.941Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73 200
+[debug] [2023-02-08T12:33:25.942Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/peaci-57b6e/versions/6185659bf9ccf68b/files/b3728eeae264b280dcd8242999355c29201380bc812128f00a1821e5488e6d73 [stream]
+[debug] [2023-02-08T12:33:25.942Z] [hosting][upload queue][FINAL] {"max":5445,"min":2509,"avg":3846.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":5447}
+[info] ✔  hosting[peaci-57b6e]: file upload complete 
+[debug] [2023-02-08T12:33:25.945Z] [hosting] deploy completed after 23713ms
+[debug] [2023-02-08T12:33:25.948Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "peaci-57b6e"
+    },
+    "version": "projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b"
+  }
+]
+[info] i  hosting[peaci-57b6e]: finalizing version... 
+[debug] [2023-02-08T12:33:25.952Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions/6185659bf9ccf68b updateMask=status%2Cconfig
+[debug] [2023-02-08T12:33:25.952Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions/6185659bf9ccf68b {"status":"FINALIZED","config":{}}
+[debug] [2023-02-08T12:33:27.570Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions/6185659bf9ccf68b 200
+[debug] [2023-02-08T12:33:27.571Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/versions/6185659bf9ccf68b {"name":"projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-02-08T12:32:57.861605Z","createUser":{"email":"anjee28.twoeight@gmail.com"},"finalizeTime":"2023-02-08T12:33:26.728279Z","finalizeUser":{"email":"anjee28.twoeight@gmail.com"}}
+[debug] [2023-02-08T12:33:27.571Z] [hosting] finalized version for peaci-57b6e:[object Object]
+[info] ✔  hosting[peaci-57b6e]: version finalized 
+[info] i  hosting[peaci-57b6e]: releasing new version... 
+[debug] [2023-02-08T12:33:27.573Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/channels/live/releases versionName=projects%2F688236333960%2Fsites%2Fpeaci-57b6e%2Fversions%2F6185659bf9ccf68b
+[debug] [2023-02-08T12:33:27.574Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/channels/live/releases {}
+[debug] [2023-02-08T12:33:30.919Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/channels/live/releases 200
+[debug] [2023-02-08T12:33:30.919Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/peaci-57b6e/channels/live/releases {"name":"projects/688236333960/sites/peaci-57b6e/channels/live/releases/1675859607746000","version":{"name":"projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-02-08T12:32:57.861605Z","createUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"},"finalizeTime":"2023-02-08T12:33:26.728279Z","finalizeUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"}},"type":"DEPLOY","releaseTime":"2023-02-08T12:33:27.746Z","releaseUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"}}
+[debug] [2023-02-08T12:33:30.919Z] [hosting] release: {"name":"projects/688236333960/sites/peaci-57b6e/channels/live/releases/1675859607746000","version":{"name":"projects/688236333960/sites/peaci-57b6e/versions/6185659bf9ccf68b","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-02-08T12:32:57.861605Z","createUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"},"finalizeTime":"2023-02-08T12:33:26.728279Z","finalizeUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"}},"type":"DEPLOY","releaseTime":"2023-02-08T12:33:27.746Z","releaseUser":{"email":"anjee28.twoeight@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/AEdFTp7QqhkN51nf7RnseNpyMCf98wj8JCpT4ozcJAvaxw"}}
+[info] ✔  hosting[peaci-57b6e]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/peaci-57b6e/overview
+[info] Hosting URL: https://peaci-57b6e.web.app
+[debug] [2023-02-08T12:33:40.718Z] Error: Timed out.
+    at Timeout.<anonymous> (/home/mel/.nvm/versions/node/v16.15.1/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
